@@ -15,7 +15,7 @@ Attraction
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Tower_of_London_White_Tower.jpg/300px-Tower_of_London_White_Tower.jpg',
     description: 'Old building',
     rating: 5,
-    category: 'old', //Example
+    category: 'History',
     address: {
       line1: 'Tower of London',
       line2: 'London',
@@ -28,7 +28,7 @@ Attraction
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/British_Museum_from_NE_2.JPG/220px-British_Museum_from_NE_2.JPG',
     description: 'Museum about Britain',
     rating: 4,
-    category: 'old', //Example
+    category: 'Museum',
     address: {
       line1: 'Great Russell St',
       line2: 'London',

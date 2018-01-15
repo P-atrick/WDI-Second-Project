@@ -9,6 +9,8 @@ mongoose.Promise     = require('bluebird');
 const methodOverride = require('method-override');
 const routes         = require('./config/routes');
 const authentication = require('./lib/authentication');
+const customResponses = require('./lib/customResponses');
+const errorHandler = require('./lib/errorHandler');
 
 const app = express();
 const { port, env, dbURI, sessionSecret } = require('./config/environment');
@@ -29,6 +31,7 @@ app.use(session({
 
 app.use(flash());
 
+app.use(customResponses);
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(methodOverride(function (req) {
@@ -41,5 +44,6 @@ app.use(methodOverride(function (req) {
 
 app.use(authentication);
 app.use(routes);
+app.use(errorHandler);
 
 app.listen(port, () => console.log(`Express is listening on port ${port}`));

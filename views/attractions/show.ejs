@@ -5,9 +5,3 @@
 <h3><%= attraction.description %></h3>
 <h3><%= attraction.address.line1 %>, <%= attraction.address.line2 %></h3>
 <h3><%= attraction.address.postcode %></h3>
-
-<a href="/attractions/<%= attraction.id %>/edit" class="button button-primary">Edit</a>
-<form method="POST" action="/attractions/<%= attraction.id %>">
-  <input type="hidden" name="_method" value="DELETE">
-  <button class="button-primary">Delete</button>
-</form>
