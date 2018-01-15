@@ -1,1 +1,53 @@
-<h1>edit</h1>
+<h1>Edit</h1>
+<h2><%= attraction.placeName %></h2>
+
+<form method="POST" action="/attractions">
+  <div class="form-group">
+    <label for="placeName">Place name</label>
+    <input type="text" name="placeName" value="<%= attraction.placeName %>" id="placeName" required minlength="2">
+  </div>
+  <div class="form-group">
+    <label for="website">Website</label>
+    <input type="url" name="website" value="<%= attraction.website %>" id="website" required>
+  </div>
+  <div class="form-group">
+    <label for="image">Image url</label>
+    <input type="url" name="image" value="<%= attraction.image %>" id="image" required>
+  </div>
+  <div class="form-group">
+    <label for="description">Short description</label>
+    <input type="text" name="description" value="<%= attraction.description %>" id="description" required>
+  </div>
+  <div class="form-group">
+    <label for="rating">Rating out of 5</label>
+    <input type="number" name="rating" value="<%= attraction.rating %>" id="rating" required>
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select class="form-control" id="category">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="line1">Address line 1</label>
+    <input type="text" name="line1" value="<%= attraction.address.line1 %>" id="line1" required>
+  </div>
+  <div class="form-group">
+    <label for="line2">Address line 2</label>
+    <input type="text" name="line2" value="<%= attraction.address.line2 %>" id="line2" required>
+  </div>
+  <div class="form-group">
+    <label for="postcode">Postcode</label>
+    <input type="text" name="postcode" value="<%= attraction.address.postcode %>" id="postcode" required>
+  </div>
+  <div class="form-group">
+    <label for="coordinates">Coordinates</label>
+    <input type="text" name="coordinates" value="<%= attraction.latLng %>" id="coordinates" required>
+  </div>
+
+  <button class="button">Submit</button>
+</form>
