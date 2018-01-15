@@ -1,7 +1,8 @@
 <h1>Edit</h1>
 <h2><%= attraction.placeName %></h2>
 
-<form method="POST" action="/attractions">
+<form method="POST" action="/attractions/<%= attraction.id %>">
+  <input type="hidden" name="_method" value="PUT">
   <div class="form-group">
     <label for="placeName">Place name</label>
     <input type="text" name="placeName" value="<%= attraction.placeName %>" id="placeName" required minlength="2">
