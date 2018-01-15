@@ -26,32 +26,27 @@
   <div class="form-group">
     <label for="category">Category</label>
     <select class="form-control" id="category">
-      <option>Art</option>
-      <option>Architecture</option>
-      <option>Entertainment</option>
-      <option>History</option>
-      <option>Nature</option>
-      <option>Museum</option>
-      <option>Shopping</option>
-      <option>Other</option>
+      <option <% if(attraction.category === 'Art') { %>selected<% } %>>Art</option>
+      <option <% if(attraction.category === 'Architecture') { %>selected<% } %>>Architecture</option>
+      <option <% if(attraction.category === 'Art') { %>selected<% } %>>Entertainment</option>
+      <option <% if(attraction.category === 'History') { %>selected<% } %>>History</option>
+      <option <% if(attraction.category === 'Art') { %>selected<% } %>>Nature</option>
+      <option <% if(attraction.category === 'Art') { %>selected<% } %>>Museum</option>
+      <option <% if(attraction.category === 'Art') { %>selected<% } %>>Shopping</option>
+      <option <% if(attraction.category === 'Art') { %>selected<% } %>>Other</option>
     </select>
   </div>
   <div class="form-group">
-    <label for="line1">Address line 1</label>
-    <input type="text" name="line1" value="<%= attraction.address.line1 %>" id="line1" required>
+    <label for="addressLine1">Address line 1</label>
+    <input type="text" name="addressLine1" value="<%= attraction.address.line1 %>" id="addressLine1" required>
   </div>
   <div class="form-group">
-    <label for="line2">Address line 2</label>
-    <input type="text" name="line2" value="<%= attraction.address.line2 %>" id="line2" required>
+    <label for="addressLine2">Address line 2</label>
+    <input type="text" name="addressLine2" value="<%= attraction.address.line2 %>" id="addressLine2" required>
   </div>
   <div class="form-group">
     <label for="postcode">Postcode</label>
     <input type="text" name="postcode" value="<%= attraction.address.postcode %>" id="postcode" required>
   </div>
-  <div class="form-group">
-    <label for="coordinates">Coordinates</label>
-    <input type="text" name="coordinates" value="<%= attraction.latLng %>" id="coordinates" required>
-  </div>
-
-  <button class="button">Submit</button>
+  <button class="btn btn-primary">Submit</button>
 </form>

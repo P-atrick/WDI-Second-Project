@@ -15,16 +15,17 @@ const attractionSchema = new mongoose.Schema({
   placeName: { type: String, minlength: 3, required: true },
   website: { type: String, trim: true },
   image: { type: String, required: true, trim: true },
-  description: { type: String, minlength: 10, required: true },
+  description: { type: String, required: true },
   rating: { type: Number, required: true },
   category: { type: String, minlength: 3, required: true, trim: true },
   address: {
-    line1: { type: String, minlength: 3, required: true },
-    line2: { type: String, minlength: 3 },
-    postcode: { type: String, minlength: 5, required: true }
+    line1: { type: String, required: true },
+    line2: { type: String },
+    postcode: { type: String, required: true },
+    lat: { type: Number, required: true },
+    lng: { type: Number, required: true }
   },
-  latLng: { type: String, minlength: 3, required: true },
-  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'},
+  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true},
   comments: [ commentSchema ]
 });
 

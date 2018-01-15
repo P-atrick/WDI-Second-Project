@@ -20,6 +20,12 @@ router.route('/attractions/:id')
 router.route('/attractions/:id/edit')
   .get(attractions.edit);
 
+router.route('/attractions/:id/comments')
+  .post(attractions.createComment);
+
+router.route('/attractions/:id/comments/:commentId')
+  .delete(attractions.deleteComment);
+
 router.route('/register')
   .get(registrations.new)
   .post(registrations.create);

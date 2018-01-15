@@ -23,7 +23,7 @@
   </div>
   <div class="form-group">
     <label for="category">Category</label>
-    <select class="form-control" id="category">
+    <select class="form-control" id="category" name="category">
       <option>Art</option>
       <option>Architecture</option>
       <option>Entertainment</option>
@@ -36,20 +36,24 @@
   </div>
   <div class="form-group">
     <label for="line1">Address line 1</label>
-    <input type="text" name="line1" placeholder="Address line 1" id="line1" required>
+    <input type="text" name="address[line1]" placeholder="Address line 1" id="line1" required>
   </div>
   <div class="form-group">
     <label for="line2">Address line 2</label>
-    <input type="text" name="line2" placeholder="Address line 2" id="line2" required>
+    <input type="text" name="address[line2]" placeholder="Address line 2" id="line2" required>
   </div>
   <div class="form-group">
     <label for="postcode">Postcode</label>
-    <input type="text" name="postcode" placeholder="Postcode" id="postcode" required>
+    <input type="text" name="address[postcode]" placeholder="Postcode" id="postcode" required>
   </div>
   <div class="form-group">
-    <label for="coordinates">Coordinates</label>
-    <input type="text" name="coordinates" placeholder="Coordinates" id="coordinates" required>
+    <label for="coordinates">Lat</label>
+    <input type="text" name="address[lat]" placeholder="Lat" id="lat" required>
+  </div>
+  <div class="form-group">
+    <label for="coordinates">Lng</label>
+    <input type="text" name="address[lng]" placeholder="Lng" id="lat" required>
   </div>
 
-  <button class="button">Submit</button>
+  <button class="btn btn-primary" id="createButton">Submit</button>
 </form>

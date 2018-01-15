@@ -82,6 +82,41 @@ function deleteRoute(req, res, next) {
     .catch(next);
 }
 
+function createCommentRoute(req, res, next) {
+  req.body.createdBy = req.user;
+
+  Attraction
+    .findById(req.params.id)
+    .exec()
+    .then((attraction) => {
+      if(!attraction) return res.notFound();
+
+      attraction.comments.push(req.body);
+      return attraction.save();
+    })
+    .then((attraction) => {
+      res.redirect(`/attractions/${attraction.id}`);
+    })
+    .catch(next);
+}
+
+function deleteCommentRoute(req, res, next) {
+  Attraction
+    .findById(req.params.id)
+    .exec()
+    .then((attraction) => {
+      if(!attraction) return res.notFound();
+
+      const comment = attraction.comments.id(req.params.commentId);
+      comment.remove();
+      return attraction.save();
+    })
+    .then((attraction) => {
+      res.redirect(`/attractions/${attraction.id}`);
+    })
+    .catch(next);
+}
+
 module.exports = {
   index: indexRoute,
   new: newRoute,
@@ -89,5 +124,7 @@ module.exports = {
   create: createRoute,
   edit: editRoute,
   update: updateRoute,
-  delete: deleteRoute
+  delete: deleteRoute,
+  createComment: createCommentRoute,
+  deleteComment: deleteCommentRoute
 };

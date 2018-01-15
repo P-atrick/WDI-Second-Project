@@ -36,6 +36,6 @@ Attraction
     },
     latLng: '51.5194133,-0.1291453'
   }])
-  .then((attractions) => console.log(`${attractions.length} attraction created`))
+  .then((attractions) => console.log(`${attractions.length} attractions created`))
   .catch((err) => console.log(err))
   .finally(() => mongoose.connection.close());
