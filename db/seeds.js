@@ -22,4 +22,7 @@ Attraction
       postcode: 'EC3N 4AB'
     },
     latLng: '51.5081124,-0.078138'
-  }]);
+  }])
+  .then((attractions) => console.log(`${attractions.length} hotels created`))
+  .catch((err) => console.log(err))
+  .finally(() => mongoose.connection.close());
