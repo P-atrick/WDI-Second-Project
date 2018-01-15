@@ -1,59 +1,69 @@
 <h1>Add an attraction</h1>
 
-<form method="POST" action="/attractions">
-  <div class="form-group">
-    <label for="placeName">Place name</label>
-    <input type="text" name="placeName" placeholder="Place name" id="placeName" required minlength="2">
-  </div>
-  <div class="form-group">
-    <label for="website">Website</label>
-    <input type="text" name="website" placeholder="Website" id="website" required>
-  </div>
-  <div class="form-group">
-    <label for="image">Image url</label>
-    <input type="text" name="image" placeholder="Image url" id="image" required>
-  </div>
-  <div class="form-group">
-    <label for="description">Short description</label>
-    <input type="text" name="description" placeholder="Short description" id="description" required>
-  </div>
-  <div class="form-group">
-    <label for="rating">Rating out of 5</label>
-    <input type="number" name="rating" placeholder="Rating out of 5" id="rating" required>
-  </div>
-  <div class="form-group">
-    <label for="category">Category</label>
-    <select class="form-control" id="category" name="category">
-      <option>Art</option>
-      <option>Architecture</option>
-      <option>Entertainment</option>
-      <option>History</option>
-      <option>Nature</option>
-      <option>Museum</option>
-      <option>Shopping</option>
-      <option>Other</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="line1">Address line 1</label>
-    <input type="text" name="address[line1]" placeholder="Address line 1" id="line1" required>
-  </div>
-  <div class="form-group">
-    <label for="line2">Address line 2</label>
-    <input type="text" name="address[line2]" placeholder="Address line 2" id="line2" required>
-  </div>
-  <div class="form-group">
-    <label for="postcode">Postcode</label>
-    <input type="text" name="address[postcode]" placeholder="Postcode" id="postcode" required>
-  </div>
-  <div class="form-group">
-    <label for="coordinates">Lat</label>
-    <input type="text" name="address[lat]" placeholder="Lat" id="lat" required>
-  </div>
-  <div class="form-group">
-    <label for="coordinates">Lng</label>
-    <input type="text" name="address[lng]" placeholder="Lng" id="lat" required>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6">
+      <form method="POST" action="/attractions">
+        <div class="form-group">
+          <label for="placeName">Place name</label>
+          <input class="form-control" type="text" name="placeName" placeholder="Place name" id="placeName" required minlength="2">
+        </div>
+        <div class="form-group">
+          <label for="website">Website</label>
+          <input class="form-control" type="text" name="website" placeholder="Website" id="website" required>
+        </div>
+        <div class="form-group">
+          <label for="image">Image url</label>
+          <input class="form-control" type="text" name="image" placeholder="Image url" id="image" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Short description</label>
+          <input class="form-control" type="text" name="description" placeholder="Short description" id="description" required>
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating out of 5</label>
+          <input class="form-control" type="number" name="rating" placeholder="Rating out of 5" id="rating" required>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select class="form-control" id="category" name="category">
+            <option>Art</option>
+            <option>Architecture</option>
+            <option>Entertainment</option>
+            <option>History</option>
+            <option>Nature</option>
+            <option>Museum</option>
+            <option>Shopping</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="line1">Address line 1</label>
+          <input class="form-control" type="text" name="address[line1]" placeholder="Address line 1" id="line1" required>
+        </div>
+        <div class="form-group">
+          <label for="line2">Address line 2</label>
+          <input class="form-control" type="text" name="address[line2]" placeholder="Address line 2" id="line2" required>
+        </div>
+        <div class="form-group">
+          <label for="postcode">Postcode</label>
+          <input class="form-control" type="text" name="address[postcode]" placeholder="Postcode" id="postcode" required>
+        </div>
+        <div class="form-group">
+          <label for="coordinates">Lat</label>
+          <input class="form-control" type="text" name="address[lat]" placeholder="Lat" id="lat" required>
+        </div>
+        <div class="form-group">
+          <label for="coordinates">Lng</label>
+          <input class="form-control" type="text" name="address[lng]" placeholder="Lng" id="lat" required>
+        </div>
 
-  <button class="btn btn-primary" id="createButton">Submit</button>
-</form>
+        <button class="btn btn-primary" id="createButton">Submit</button>
+      </form>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>

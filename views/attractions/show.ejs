@@ -7,6 +7,10 @@
 <h3><%= attraction.address.line1 %>, <%= attraction.address.line2 %></h3>
 <h3><%= attraction.address.postcode %></h3>
 
+<div class="map">
+
+</div>
+
 <a class="btn btn-primary" href="/attractions/<%= attraction.id %>/edit">Edit</a>
 <form method="POST" action="/attractions/<%= attraction.id %>">
   <input type="hidden" name="_method" value="DELETE">

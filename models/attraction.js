@@ -25,7 +25,7 @@ const attractionSchema = new mongoose.Schema({
     lat: { type: Number, required: true },
     lng: { type: Number, required: true }
   },
-  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true},
+  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'},
   comments: [ commentSchema ]
 });
 

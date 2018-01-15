@@ -19,9 +19,10 @@ Attraction
     address: {
       line1: 'Tower of London',
       line2: 'London',
-      postcode: 'EC3N 4AB'
-    },
-    latLng: '51.5081124,-0.078138'
+      postcode: 'EC3N 4AB',
+      lat: 51.5081124,
+      lng: -0.078138
+    }
   }, {
     placeName: 'British Museum',
     website: 'http://www.britishmuseum.org/',
@@ -32,9 +33,10 @@ Attraction
     address: {
       line1: 'Great Russell St',
       line2: 'London',
-      postcode: 'WC1B 3DG'
-    },
-    latLng: '51.5194133,-0.1291453'
+      postcode: 'WC1B 3DG',
+      lat: 51.5194133,
+      lng: -0.1291453
+    }
   }])
   .then((attractions) => console.log(`${attractions.length} attractions created`))
   .catch((err) => console.log(err))
