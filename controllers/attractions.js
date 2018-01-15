@@ -13,7 +13,7 @@ function indexRoute(req, res) {
 }
 
 function newRoute(req, res) {
-  res.render('attractions/new');
+  return res.render('attractions/new');
 }
 
 function showRoute(req, res) {
@@ -86,10 +86,6 @@ function deleteRoute(req, res) {
       res.status(500).render('error', { err });
     });
 }
-
-
-
-
 
 module.exports = {
   index: indexRoute,

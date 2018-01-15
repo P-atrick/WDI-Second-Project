@@ -12,16 +12,29 @@ Attraction
   .create([{
     placeName: 'Tower of London',
     website: 'https://www.hrp.org.uk/tower-of-london/',
-    image: 'http://cdn.ltstatic.com/2005/February/VI983354_942long.jpg',
-    description: 'Tower of London',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Tower_of_London_White_Tower.jpg/300px-Tower_of_London_White_Tower.jpg',
+    description: 'Old building',
     rating: 5,
-    category: 'old',
+    category: 'old', //Example
     address: {
       line1: 'Tower of London',
       line2: 'London',
       postcode: 'EC3N 4AB'
     },
     latLng: '51.5081124,-0.078138'
+  }, {
+    placeName: 'British Museum',
+    website: 'http://www.britishmuseum.org/',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/British_Museum_from_NE_2.JPG/220px-British_Museum_from_NE_2.JPG',
+    description: 'Museum about Britain',
+    rating: 4,
+    category: 'old', //Example
+    address: {
+      line1: 'Great Russell St',
+      line2: 'London',
+      postcode: 'WC1B 3DG'
+    },
+    latLng: '51.5194133,-0.1291453'
   }])
   .then((attractions) => console.log(`${attractions.length} attraction created`))
   .catch((err) => console.log(err))

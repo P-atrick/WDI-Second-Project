@@ -10,7 +10,7 @@ router.route('/attractions')
   .post(attractions.create);
 
 router.route('/attractions/new')
-  .post(attractions.new);
+  .get(attractions.new);
 
 router.route('/attractions/:id')
   .get(attractions.show)

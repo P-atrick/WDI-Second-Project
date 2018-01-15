@@ -3,7 +3,8 @@
 <ul class="row">
   <% attractions.forEach((attraction) => { %>
     <li class="">
-      <h4><%= attraction.placeName %></h4>
+    <img src="<%= attraction.image %>">
+      <a href="/attractions/<%= attraction.id %>"><h4><%= attraction.placeName %></h4></a>
     </li>
   <% }); %>
 </ul>
