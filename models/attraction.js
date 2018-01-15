@@ -12,7 +12,7 @@ commentSchema.methods.belongsTo = function commentBelongsTo(user) {
 };
 
 const attractionSchema = new mongoose.Schema({
-  placeName: { type: String, minlength: 3, required: true, trim: true },
+  placeName: { type: String, minlength: 3, required: true },
   website: { type: String, trim: true },
   image: { type: String, required: true, trim: true },
   description: { type: String, minlength: 10, required: true },
@@ -23,8 +23,8 @@ const attractionSchema = new mongoose.Schema({
     line2: { type: String, minlength: 3 },
     postcode: { type: String, minlength: 5, required: true }
   },
-  latLng: { type: String, minlength: 3, required: true, trim: true },
-  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  latLng: { type: String, minlength: 3, required: true },
+  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'},
   comments: [ commentSchema ]
 });
 
