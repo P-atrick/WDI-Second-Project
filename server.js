@@ -1,12 +1,17 @@
+const bcrypt = require('bcrypt');
+const bodyParser = require('body-parser');
 const express        = require('express');
-const morgan         = require('morgan');
 const expressLayouts = require('express-ejs-layouts');
-const routes         = require('./config/routes');
+const flash = require('express-flash');
+const morgan         = require('morgan');
+const sessions = require('express-session');
 const mongoose       = require('mongoose');
 mongoose.Promise     = require('bluebird');
-const { port, env, dbURI } = require('./config/environment');
+const methodOverride = require('method-override');
+const routes         = require('./config/routes');
 
 const app = express();
+const { port, env, dbURI } = require('./config/environment');
 
 mongoose.connect(dbURI);
 
