@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const express        = require('express');
 const expressLayouts = require('express-ejs-layouts');
@@ -21,7 +20,6 @@ app.set('views', `${__dirname}/views`);
 app.use(expressLayouts);
 app.use(express.static(`${__dirname}/public`));
 if(env === 'development') app.use(morgan('dev'));
-
 
 app.use(session({
   secret: sessionSecret,

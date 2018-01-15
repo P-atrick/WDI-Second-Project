@@ -1,8 +1,8 @@
+const { dbURI } = require('../config/environment');
 const mongoose   = require('mongoose');
 mongoose.Promise = require('bluebird');
 
-const databaseURL = 'mongodb://localhost/restful-routing';
-mongoose.connect(databaseURL);
+mongoose.connect(dbURI);
 
 const Attraction = require('../models/attraction');
 
@@ -23,6 +23,6 @@ Attraction
     },
     latLng: '51.5081124,-0.078138'
   }])
-  .then((attractions) => console.log(`${attractions.length} hotels created`))
+  .then((attractions) => console.log(`${attractions.length} attraction created`))
   .catch((err) => console.log(err))
   .finally(() => mongoose.connection.close());
