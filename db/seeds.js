@@ -12,7 +12,7 @@ Attraction
   .create([{
     placeName: 'Tower of London',
     website: 'https://www.hrp.org.uk/tower-of-london/',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Tower_of_London_White_Tower.jpg/300px-Tower_of_London_White_Tower.jpg',
+    image: 'https://i.imgur.com/Qio0q4K.jpg',
     description: 'Old building',
     rating: 5,
     category: 'History',
@@ -26,7 +26,7 @@ Attraction
   }, {
     placeName: 'British Museum',
     website: 'http://www.britishmuseum.org/',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/British_Museum_from_NE_2.JPG/220px-British_Museum_from_NE_2.JPG',
+    image: 'https://i.imgur.com/Q4wQB2J.jpg',
     description: 'Museum about Britain',
     rating: 4,
     category: 'Museum',
@@ -40,7 +40,7 @@ Attraction
   }, {
     placeName: 'National Gallery',
     website: 'http://www.nationalgallery.org.uk/',
-    image: 'http://www.telegraph.co.uk/content/dam/news/2016/10/28/National_Gallery_trans_NvBQzQNjv4Bq3VPGG0kT-UwTbOOqgA0Jd6_qRYrSU6X_GnQkSAtQ0mA.jpg?imwidth=480',
+    image: 'https://i.imgur.com/ozhI3ND.jpg',
     description: 'The National Gallery',
     rating: 3,
     category: 'Art',
@@ -54,7 +54,7 @@ Attraction
   }, {
     placeName: 'St.James Park',
     website: 'https://www.royalparks.org.uk/parks/st-jamess-park',
-    image: 'http://www.walklondon.com/london-walks/walk-london-images/royal-london/st-james%27s-park-att2.jpg',
+    image: 'https://i.imgur.com/08HHq1X.jpg',
     description: 'Large Park',
     rating: 4,
     category: 'Nature',
@@ -68,7 +68,7 @@ Attraction
   }, {
     placeName: 'Tower Bridge',
     website: 'http://www.towerbridge.org.uk/',
-    image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/43/af/b8/tower-bridge.jpg',
+    image: 'https://i.imgur.com/VNO9wT1.jpg',
     description: 'Bridge',
     rating: 5,
     category: 'Architecture',
