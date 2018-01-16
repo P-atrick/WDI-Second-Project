@@ -46,7 +46,11 @@
 
 <% attraction.comments.forEach((comment) => { %>
   <p><%= comment.content %></p>
-  <small><%= comment.createdBy.username %></small>
+  <small><%= comment.createdBy.firstName %></small>
+  <form method="POST" action="/attractions/<%= attraction.id %>/comments/<%= comment.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+  </form>
 <% }) %>
 
 <section>
