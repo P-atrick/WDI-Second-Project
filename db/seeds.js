@@ -76,8 +76,8 @@ Attraction
       line1: 'Tower Bridge Road',
       line2: 'London',
       postcode: 'SE1 2UP',
-      lat: 51.5081124,
-      lng: -0.078138
+      lat: 51.5054,
+      lng: -0.0755235
     }
   }])
   .then((attractions) => console.log(`${attractions.length} attractions created`))

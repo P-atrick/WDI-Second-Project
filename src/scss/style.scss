@@ -12,6 +12,7 @@ ul {
 }
 
 .map {
+  margin-top: 20px;
    width: 80%;
    height: 30vh;
    background-color: grey;
@@ -29,4 +30,9 @@ ul {
 
 .card-place-name {
   text-align: center;
+}
+
+.show-info-row {
+  margin-bottom: -20px;
+  margin-top: -10px;
 }

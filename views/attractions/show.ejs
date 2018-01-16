@@ -8,18 +8,20 @@
   <div class="row">
     <div class="col-6">
       <div class="row">
-        <div class="col-8 box">
+        <div class="col-10 box">
           <p>Rating - <%= attraction.rating %> / 5</p>
-        </div>
-        <div class="col-2 box">
-          <p><%= attraction.category %></p>
         </div>
         <div class="col-2 box">
           <a href="<%= attraction.website%>"><p>Website</p></a>
         </div>
       </div>
+      <div class="row show-info-row">
+        <div class="col-2 box">
+          <p><%= attraction.category %></p>
+        </div>
+      </div>
       <hr>
-      <div class="row box">
+      <div class="row">
         <div class="col">
           <p><%= attraction.address.line1 %>, <%= attraction.address.line2 %></p>
         </div>
