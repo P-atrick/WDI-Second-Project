@@ -1,5 +1,3 @@
-<script src="/js/centerMap.js" charset="utf-8"></script>
-
 <h1 class="show-header"><%= attraction.placeName %></h1>
 <form class="show-attraction" action="index.html" method="post">
 
@@ -64,15 +62,17 @@
       </form>
     <% }) %>
   </div>
-  <div class="row">
-    <section>
-      <h4>Leave a comment</h4>
-      <div class="form-group">
-        <form method="POST" action="/attractions/<%= attraction.id %>/comments">
-          <textarea class="form-control" name="content" id="content" placeholder="Comment"></textarea>
-          <button class="btn btn-primary">Leave a comment</button>
-        </form>
-      </div>
-    </section>
-  </div>
+  <% if(locals.isLoggedIn) { %>
+    <div class="row">
+      <section>
+        <h4>Leave a comment</h4>
+        <div class="form-group">
+          <form method="POST" action="/attractions/<%= attraction.id %>/comments">
+            <textarea class="form-control" name="content" id="content" placeholder="Comment"></textarea>
+            <button class="btn btn-primary">Leave a comment</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  <% } %>
 </div>

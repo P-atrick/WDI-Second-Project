@@ -27,7 +27,6 @@ $(() => {
   //On show attraction page
   if ($('.show-attraction').length !== 0) {
     initMap();
-    console.log($lat, $lng);
   }
 
   //On new attraction page
