@@ -1,29 +1,38 @@
+<script src="/js/centerMap.js" charset="utf-8"></script>
+
 <h1 class="show-header"><%= attraction.placeName %></h1>
 
+<form class="show-attraction" action="index.html" method="post">
+
+</form>
 <div class="container">
   <div class="row">
     <div class="col-6">
       <div class="row">
-        <div class="col-1">
+        <div class="col-10 box">
           <p><%= attraction.rating %></p>
         </div>
-        <div class="col-11">
-          <p><%= attraction.website%></p>
+        <div class="col-2 box">
+          <a href="<%= attraction.website%>"><p>Website</p></a>
+        </div>
+      </div>
+      <div class="row box">
+        <div class="col">
+          <p><%= attraction.address.line1 %>, <%= attraction.address.line2 %></p>
         </div>
       </div>
       <div class="row">
-        <p><%= attraction.address.line1 %>, <%= attraction.address.line2 %></p>
-      </div>
-      <div class="row">
-        <div class="col-3">
+        <div class="col-3 box">
           <p><%= attraction.address.postcode %></p>
         </div>
-        <div class="col-9">
+        <div class="col-9 box">
           <p><%= attraction.category %></p>
         </div>
       </div>
-      <div class="row">
-        <p><%= attraction.description %></p>
+      <div class="row box">
+        <div class="col">
+          <p><%= attraction.description %></p>
+        </div>
       </div>
     </div>
     <div class="col-6">
@@ -36,29 +45,31 @@
       </div>
     </div>
   </div>
-</div>
-
-<a class="btn btn-primary" href="/attractions/<%= attraction.id %>/edit">Edit</a>
-<form method="POST" action="/attractions/<%= attraction.id %>">
-  <input type="hidden" name="_method" value="DELETE">
-  <button class="btn btn-primary" >Delete</button>
-</form>
-
-<% attraction.comments.forEach((comment) => { %>
-  <p><%= comment.content %></p>
-  <small><%= comment.createdBy.firstName %></small>
-  <form method="POST" action="/attractions/<%= attraction.id %>/comments/<%= comment.id %>">
-    <input type="hidden" name="_method" value="DELETE">
-    <button>Delete</button>
-  </form>
-<% }) %>
-
-<section>
-  <h4>Leave a comment</h4>
-  <div class="form-group">
-    <form method="POST" action="/attractions/<%= attraction.id %>/comments">
-      <textarea class="form-control" name="content" id="content" placeholder="Comment"></textarea>
-      <button class="btn btn-primary">Leave a comment</button>
+  <div class="row">
+    <a class="btn btn-primary edit-delete-buttons" href="/attractions/<%= attraction.id %>/edit">Edit</a>
+    <form method="POST" action="/attractions/<%= attraction.id %>" class="edit-delete-buttons">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="btn btn-primary" >Delete</button>
     </form>
+
+    <% attraction.comments.forEach((comment) => { %>
+      <p><%= comment.content %></p>
+      <small><%= comment.createdBy.firstName %></small>
+      <form method="POST" action="/attractions/<%= attraction.id %>/comments/<%= comment.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Delete</button>
+      </form>
+    <% }) %>
   </div>
-</section>
+  <div class="row">
+    <section>
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <form method="POST" action="/attractions/<%= attraction.id %>/comments">
+          <textarea class="form-control" name="content" id="content" placeholder="Comment"></textarea>
+          <button class="btn btn-primary">Leave a comment</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

@@ -6,8 +6,6 @@ $(() => {
   let map = null;
   let locations = null;
 
-  initMap();
-
   function initMap() {
     const latLng = { lat: 51.515213, lng: -0.072331 };
     map = new google.maps.Map($map.get(0), {
@@ -15,10 +13,14 @@ $(() => {
       zoom: 14
     });
   }
-  
-  // function init() {
-  //   var input = document.getElementById('locationTextField');
-  //   var autocomplete = new google.maps.places.Autocomplete(input);
-  // }
-  // google.maps.event.addDomListener(window, 'load', init);
+
+  if ($('.show-attraction').length !== 0) {
+    initMap();
+  }
+
+
+  if ($('.add-attraction').length !== 0) {
+    var input = document.getElementById('autocomplete');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  }
 });
