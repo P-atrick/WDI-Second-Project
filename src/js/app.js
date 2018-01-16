@@ -14,11 +14,17 @@ $(() => {
     });
   }
 
+  //On show attraction page
   if ($('.show-attraction').length !== 0) {
     initMap();
+    const $lat = $('#lat-lng').attr('data-lat');
+    const $lng = $('#lat-lng').attr('data-lng');
+    console.log($lat, $lng);
+    const latLng = { $lat, $lng }
+
   }
 
-
+  //On new attraction page
   if ($('.add-attraction').length !== 0) {
     var input = document.getElementById('autocomplete');
     var autocomplete = new google.maps.places.Autocomplete(input);
