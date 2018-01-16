@@ -2,23 +2,24 @@ const router = require('express').Router();
 const sessions = require('../controllers/sessions');
 const registrations = require('../controllers/registrations');
 const attractions = require('../controllers/attractions');
+const secureRoute = require('../lib/secureRoute');
 
 router.get('/', (req, res) => res.render('statics/index'));
 
 router.route('/attractions')
   .get(attractions.index)
-  .post(attractions.create);
+  .post(secureRoute, attractions.create);
 
 router.route('/attractions/new')
-  .get(attractions.new);
+  .get(secureRoute, attractions.new);
 
 router.route('/attractions/:id')
   .get(attractions.show)
-  .put(attractions.update)
-  .delete(attractions.delete);
+  .put(secureRoute, attractions.update)
+  .delete(secureRoute, attractions.delete);
 
 router.route('/attractions/:id/edit')
-  .get(attractions.edit);
+  .get(secureRoute, attractions.edit);
 
 router.route('/attractions/:id/comments')
   .post(attractions.createComment);
