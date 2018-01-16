@@ -4,9 +4,9 @@
 
   <% attractions.forEach((attraction) => { %>
     <div class="card col-3" style="width: 20rem; margin: 5px;">
-      <img class="card-img-top" src="<%= attraction.image %>" alt="Card image cap">
+      <a href="/attractions/<%= attraction.id %>" target="_blank"><img class="card-img-top" src="<%= attraction.image %>" alt="Card image cap"></a>
       <div class="card-body">
-        <a href="/attractions/<%= attraction.id %>"><h5 class="card-title"><%= attraction.placeName %></h5></a>
+        <a href="/attractions/<%= attraction.id %>" target="_blank"><h5 class="card-title card-place-name"><%= attraction.placeName %></h5></a>
       </div>
     </div>
   <% }); %>
