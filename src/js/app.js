@@ -6,8 +6,11 @@ $(() => {
   let map = null;
   let locations = null;
 
+  const $lat = $('#lat-lng').attr('data-lat');
+  const $lng = $('#lat-lng').attr('data-lng');
+
   function initMap() {
-    const latLng = { lat: 51.515213, lng: -0.072331 };
+    const latLng = { lat: parseFloat($lat), lng: parseFloat($lng) };
     map = new google.maps.Map($map.get(0), {
       center: latLng,
       zoom: 14
@@ -17,10 +20,7 @@ $(() => {
   //On show attraction page
   if ($('.show-attraction').length !== 0) {
     initMap();
-    const $lat = $('#lat-lng').attr('data-lat');
-    const $lng = $('#lat-lng').attr('data-lng');
     console.log($lat, $lng);
-    const latLng = { $lat, $lng }
 
   }
 
