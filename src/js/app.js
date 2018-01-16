@@ -8,20 +8,26 @@ $(() => {
 
   const $lat = $('#lat-lng').attr('data-lat');
   const $lng = $('#lat-lng').attr('data-lng');
+  const latLng = { lat: parseFloat($lat), lng: parseFloat($lng) };
+
 
   function initMap() {
-    const latLng = { lat: parseFloat($lat), lng: parseFloat($lng) };
     map = new google.maps.Map($map.get(0), {
       center: latLng,
       zoom: 14
     });
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: map,
+      title: 'Hello World!'
+    });
   }
+
 
   //On show attraction page
   if ($('.show-attraction').length !== 0) {
     initMap();
     console.log($lat, $lng);
-
   }
 
   //On new attraction page
