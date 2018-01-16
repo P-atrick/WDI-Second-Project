@@ -37,6 +37,48 @@ Attraction
       lat: 51.5194133,
       lng: -0.1291453
     }
+  }, {
+    placeName: 'National Gallery',
+    website: 'http://www.nationalgallery.org.uk/',
+    image: 'http://www.telegraph.co.uk/content/dam/news/2016/10/28/National_Gallery_trans_NvBQzQNjv4Bq3VPGG0kT-UwTbOOqgA0Jd6_qRYrSU6X_GnQkSAtQ0mA.jpg?imwidth=480',
+    description: 'The National Gallery',
+    rating: 3,
+    category: 'Art',
+    address: {
+      line1: 'Trafalgar Square',
+      line2: 'London',
+      postcode: 'WC2N 5DN',
+      lat: 51.508929,
+      lng: -0.1304877
+    }
+  }, {
+    placeName: 'St.James Park',
+    website: 'https://www.royalparks.org.uk/parks/st-jamess-park',
+    image: 'http://www.walklondon.com/london-walks/walk-london-images/royal-london/st-james%27s-park-att2.jpg',
+    description: 'Large Park',
+    rating: 4,
+    category: 'Nature',
+    address: {
+      line1: 'Horse Guards Road',
+      line2: 'London',
+      postcode: 'SW1A 2BJ',
+      lat: 51.5024597,
+      lng: -0.1369996
+    }
+  }, {
+    placeName: 'Tower Bridge',
+    website: 'http://www.towerbridge.org.uk/',
+    image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/43/af/b8/tower-bridge.jpg',
+    description: 'Bridge',
+    rating: 5,
+    category: 'Architecture',
+    address: {
+      line1: 'Tower Bridge Road',
+      line2: 'London',
+      postcode: 'SE1 2UP',
+      lat: 51.5081124,
+      lng: -0.078138
+    }
   }])
   .then((attractions) => console.log(`${attractions.length} attractions created`))
   .catch((err) => console.log(err))
