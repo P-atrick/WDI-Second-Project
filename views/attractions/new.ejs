@@ -7,10 +7,10 @@
     <div class="col-6">
       <form method="POST" action="/attractions" class="add-attraction">
         <div class="form-group">
-          <label for="autocomplete">Location</label>
-          <input id="autocomplete" type="text" class="form-control"234 size="50">
+          <label for="autocomplete">Attraction</label>
+          <input id="autocomplete" type="text" class="form-control" placeholder="Attraction">
         </div>
-        <div class="form-group">
+        <div class="form-group d-none">
           <label for="placeName">Place name</label>
           <input class="form-control"type="text" name="placeName" placeholder="Place name" id="placeName" required>
         </div>
@@ -39,19 +39,19 @@
             <option>Other</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group d-none">
           <label for="rating">Rating</label>
-          <input class="form-control" type="number" name="rating" placeholder="Rating" id="rating">
+          <input class="form-control" type="number" step="0.1" name="rating" placeholder="Rating" id="rating">
         </div>
-        <div class="form-group">
+        <div class="form-group d-none">
           <label for="address">Address</label>
           <input class="form-control" type="text" name="address" placeholder="Address" id="address" required>
         </div>
-        <div class="form-group">
+        <div class="form-group d-none">
           <label for="lat">Lat</label>
           <input class="form-control" type="text" name="lat" placeholder="Lat" id="lat" required>
         </div>
-        <div class="form-group">
+        <div class="form-group d-none">
           <label for="lng">Lng</label>
           <input class="form-control" type="text" name="lng" placeholder="Lng" id="lng" required>
         </div>
