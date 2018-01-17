@@ -1,67 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Attractions</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAiuF-kTCSPWEGvwdf81Hy0LfxxixvWR4&libraries=places"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
-  <script src="/js/app.js" charset="utf-8"></script>
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark layout-nav">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <% if (locals.isLoggedIn) {%>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/attractions">Attractions</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/attractions/new">Add Attraction</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item active">
-            <a class="nav-link" href="/logout">Logout</a>
-          </li>
-        </ul>
-        <% } else { %>
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/attractions">Attractions</a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item active">
-              <a class="nav-link" href="/login">Sign in</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/register">Register</a>
-            </li>
-          </ul>
-          <% } %>
-        </ul>
-      </div>
-    </nav>
+  <head>
+    <meta charset="utf-8">
+    <title>Attractions</title>
+    <% include ./partials/_stylesheets.ejs %>
+  </head>
+  <body>
+  <% include ./partials/_navbar %>
     <% for(const type in messages) { %>
       <div class="<%= type %>">
         <h5><%= messages[type] %></h5>
       </div>
     <% } %>
     <%- body %>
+    <% include ./partials/_scripts.ejs %>
   </body>
   </html>

@@ -137,7 +137,7 @@ $(() => {
     var place = autocomplete.getPlace();
     console.log(place);
     $placeName.val(place.name);
-    $address.val(place.formatted_address)
+    $address.val(place.formatted_address);
     $website.val(place.website);
     $newLat.val(place.geometry.location.lat());
     $newLng.val(place.geometry.location.lng());

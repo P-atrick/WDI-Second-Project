@@ -9,14 +9,14 @@ function sessionsCreate(req, res, next) {
     .findOne({ email: req.body.email })
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) {
-        req.flash('danger', 'Unknown email/password combination');
+        req.flash('alert-danger', 'Unknown email/password combination');
         return res.redirect('/login');
       }
 
       req.session.userId = user.id;
       req.user = user;
 
-      req.flash('success', `Welcome back, ${user.firstName}!`);
+      req.flash('alert-success', `Welcome back, ${user.firstName}!`);
       res.redirect('/');
     })
     .catch(next);

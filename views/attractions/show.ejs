@@ -44,10 +44,10 @@
   </div>
   <% if (locals.isLoggedIn && attraction.belongsTo(user)) { %>
     <div class="row index-row">
-      <a class="btn btn-dark show-page-buttons" href="/attractions/<%= attraction.id %>/edit">Edit</a>
+      <a class="btn btn-secondary show-page-buttons" href="/attractions/<%= attraction.id %>/edit">Edit</a>
       <form method="POST" action="/attractions/<%= attraction.id %>" class="show-page-buttons">
         <input type="hidden" name="_method" value="DELETE">
-        <button class="btn btn-dark" >Delete</button>
+        <button class="btn btn-secondary" >Delete</button>
       </form>
     </div>
     <% } %>
@@ -58,7 +58,7 @@
       <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
         <form method="POST" action="/attractions/<%= attraction.id %>/comments/<%= comment.id %>">
           <input type="hidden" name="_method" value="DELETE">
-          <button class="btn btn-dark btn-sm">&#x2715;</button>
+          <button class="btn btn-secondary btn-sm">&#x2715;</button>
         </form>
       <% } %>
       </div>
@@ -67,14 +67,16 @@
 
     <% if(locals.isLoggedIn) { %>
       <div class="row index-row">
+      <div class="col-6">
         <section>
           <div class="form-group">
             <form method="POST" action="/attractions/<%= attraction.id %>/comments">
-              <textarea class="form-control" name="content" id="content" placeholder="Comment"></textarea>
-              <button class="btn btn-dark show-page-buttons">Submit comment</button>
+              <textarea class="form-control comment-area" name="content" id="content" placeholder="Comment"></textarea>
+              <button class="btn btn-secondary show-page-buttons">Submit comment</button>
             </form>
           </div>
         </section>
+      </div>
       </div>
       <% } %>
     </div>
