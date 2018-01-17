@@ -1,4 +1,4 @@
-<h1 class="show-header"><%= attraction.placeName %></h1>
+<h1 class="center-header"><%= attraction.placeName %></h1>
 <hr>
 <form class="show-attraction" action="index.html" method="post">
 
@@ -54,30 +54,31 @@
         <input type="hidden" name="_method" value="DELETE">
         <button class="btn btn-primary" >Delete</button>
       </form>
-  <% } %>
+    </div>
+    <% } %>
 
     <% attraction.comments.forEach((comment) => { %>
       <p><%= comment.content %></p>
-      <small><%= comment.createdBy.id %></small>
+      <small class="comment-name"><%= comment.createdBy.firstName %></small>
       <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
-      <form method="POST" action="/attractions/<%= attraction.id %>/comments/<%= comment.id %>">
-        <input type="hidden" name="_method" value="DELETE">
-        <button>Delete</button>
-      </form>
-    <% } %>
+        <form method="POST" action="/attractions/<%= attraction.id %>/comments/<%= comment.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="btn btn-danger btn-sm">Delete Comment</button>
+        </form>
+      <% } %>
     <% }) %>
-  </div>
-  <% if(locals.isLoggedIn) { %>
-    <div class="row">
-      <section>
-        <h4>Leave a comment</h4>
-        <div class="form-group">
-          <form method="POST" action="/attractions/<%= attraction.id %>/comments">
-            <textarea class="form-control" name="content" id="content" placeholder="Comment"></textarea>
-            <button class="btn btn-primary">Leave a comment</button>
-          </form>
-        </div>
-      </section>
+
+    <% if(locals.isLoggedIn) { %>
+      <div class="row">
+        <section>
+          <h4>Leave a comment</h4>
+          <div class="form-group">
+            <form method="POST" action="/attractions/<%= attraction.id %>/comments">
+              <textarea class="form-control" name="content" id="content" placeholder="Comment"></textarea>
+              <button class="btn btn-primary">Leave a comment</button>
+            </form>
+          </div>
+        </section>
+      </div>
+      <% } %>
     </div>
-  <% } %>
-</div>

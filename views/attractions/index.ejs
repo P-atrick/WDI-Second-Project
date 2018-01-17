@@ -1,11 +1,11 @@
-<h1>London Attractions</h1>
+<h1 class="center-header">London Attractions</h1>
 
-<div class="row">
+<div class="row index-row">
   <% attractions.forEach((attraction) => { %>
-    <div class="card col-3">
-      <a href="/attractions/<%= attraction.id %>"><img class="card-img-top" src="<%= attraction.image %>" alt="Card image cap"></a>
-      <div class="card-body">
-        <a href="/attractions/<%= attraction.id %>"><h5 class="card-title card-place-name"><%= attraction.placeName %></h5></a>
+    <div class="col-3">
+      <a href="/attractions/<%= attraction.id %>"><img class="index-image" src="<%= attraction.image %>" alt="Card image cap"></a>
+      <div class="">
+        <a href="/attractions/<%= attraction.id %>"><h5 class="card-place-name"><%= attraction.placeName %></h5></a>
       </div>
     </div>
   <% }); %>
