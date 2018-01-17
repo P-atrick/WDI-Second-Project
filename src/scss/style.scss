@@ -2,6 +2,7 @@
 
 body {
   background-color: #F1F1F1;
+  color: #5F5F5F;
   font-family: 'Helvetica', sans-serif;
   nav {
     &.layout-nav {
@@ -10,14 +11,9 @@ body {
   }
   a {
     h5 {
-      color: #000;
+      color: #5F5F5F;
     }
   }
-}
-
-.btn {
-  background-color: $primary-color;
-  border-color: $primary-color;
 }
 
 ul {
@@ -25,13 +21,14 @@ ul {
 }
 
 a {
-  &.primary-link {
+  &.website-link {
     font-size: 16px;
   }
 }
 
-.box {
-  border: solid 0px red;
+.btn {
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .show-image {
@@ -61,7 +58,7 @@ a {
   margin: 10px 5px;
 }
 
-.card-place-name {
+.place-name {
   margin-bottom: 30px;
   margin-top: 10px;
   text-align: center;
@@ -93,6 +90,10 @@ a {
   font-weight: bold;
   margin-bottom: 20px;
   margin-right: 20px;
+}
+
+.comment-row {
+  margin-top: 20px;
 }
 
 .comment-text {

@@ -7,15 +7,15 @@
   <div class="row index-row show-row">
     <div class="col-8">
       <div class="row">
-        <div class="col-10 box">
+        <div class="col-10">
           <p>Rating - <%= attraction.rating %> / 5</p>
         </div>
-        <div class="col-2 box">
-          <a class="primary-link"href="<%= attraction.website%>"><p>Website</p></a>
+        <div class="col-2">
+          <a class="website-link"href="<%= attraction.website%>"><p>Website</p></a>
         </div>
       </div>
       <div class="row show-info-row">
-        <div class="col-2 box">
+        <div class="col-2">
           <p><%= attraction.category %></p>
         </div>
       </div>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <hr>
-      <div class="row box">
+      <div class="row">
         <div class="col">
           <p><%= attraction.description %></p>
         </div>
@@ -53,7 +53,7 @@
     <% } %>
 
     <% attraction.comments.forEach((comment) => { %>
-      <div class="row index-row">
+      <div class="row index-row comment-row">
       <small class="comment-name"><%= comment.createdBy.firstName %></small>
       <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
         <form method="POST" action="/attractions/<%= attraction.id %>/comments/<%= comment.id %>">
