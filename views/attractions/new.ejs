@@ -12,11 +12,11 @@
         </div>
         <div class="form-group">
           <label for="placeName">Place name</label>
-          <input class="form-control"type="text" name="placeName" placeholder="Place name" id="placeName" required disabled>
+          <input class="form-control"type="text" name="placeName" placeholder="Place name" id="placeName" required>
         </div>
         <div class="form-group">
           <label for="website">Website</label>
-          <input class="form-control" type="text" name="website" placeholder="Website" id="website" required disabled>
+          <input class="form-control" type="text" name="website" placeholder="Website" id="website" required>
         </div>
         <div class="form-group">
           <label for="image">Image url</label>
@@ -25,10 +25,6 @@
         <div class="form-group">
           <label for="description">Short description</label>
           <input class="form-control" type="text" name="description" placeholder="Short description" id="description" required>
-        </div>
-        <div class="form-group">
-          <label for="rating">Rating out of 5</label>
-          <input class="form-control" type="number" name="rating" placeholder="Rating out of 5" id="rating" required>
         </div>
         <div class="form-group">
           <label for="category">Category</label>
@@ -44,16 +40,20 @@
           </select>
         </div>
         <div class="form-group">
+          <label for="rating">Rating</label>
+          <input class="form-control" type="number" name="rating" placeholder="Rating" id="rating">
+        </div>
+        <div class="form-group">
           <label for="address">Address</label>
           <input class="form-control" type="text" name="address" placeholder="Address" id="address" required>
         </div>
         <div class="form-group">
-          <label for="coordinates">Lat</label>
-          <input class="form-control" type="text" name="address[lat]" placeholder="Lat" id="lat" required>
+          <label for="lat">Lat</label>
+          <input class="form-control" type="text" name="lat" placeholder="Lat" id="lat" required>
         </div>
         <div class="form-group">
-          <label for="coordinates">Lng</label>
-          <input class="form-control" type="text" name="address[lng]" placeholder="Lng" id="lng" required>
+          <label for="lng">Lng</label>
+          <input class="form-control" type="text" name="lng" placeholder="Lng" id="lng" required>
         </div>
 
         <button class="btn btn-primary" id="createButton">Submit</button>

@@ -17,8 +17,8 @@ Attraction
     rating: 5,
     category: 'History',
     address: '362 Tower Hill, St Katharines & Wapping, London EC3N 4DR, UK',
-    lat: 51.5081124,
-    lng: -0.078138,
+    lat: 51.508094,
+    lng: -0.076119,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'British Museum',
@@ -28,8 +28,8 @@ Attraction
     rating: 4,
     category: 'Museum',
     address: 'Great Russell St, Bloomsbury, London WC1B 3DG, UK',
-    lat: 51.5194133,
-    lng: -0.1291453,
+    lat: 51.5192765,
+    lng: -0.1269454,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'National Gallery',
@@ -39,8 +39,8 @@ Attraction
     rating: 3,
     category: 'Art',
     address: 'Trafalgar Square, London WC2N 5DN, UK',
-    lat: 51.508929,
-    lng: -0.1304877,
+    lat: 51.5089102,
+    lng: -0.128466,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'St.James Park',
@@ -50,8 +50,8 @@ Attraction
     rating: 4,
     category: 'Nature',
     address: 'Horse Guards Road, London SW1A 2BJ, UK',
-    lat: 51.5024597,
-    lng: -0.1369996,
+    lat: 51.5023845,
+    lng: -0.1346359,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'Tower Bridge',
@@ -61,8 +61,8 @@ Attraction
     rating: 5,
     category: 'Architecture',
     address: 'Tower Bridge, London SE1 2AA, UK',
-    lat: 51.5054,
-    lng: -0.0755235,
+    lat: 51.5055252,
+    lng: -0.0754933,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }])
   .then((attractions) => console.log(`${attractions.length} attractions created`))

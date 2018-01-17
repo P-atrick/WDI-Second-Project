@@ -15,6 +15,7 @@ $(() => {
   const $website = $('#website');
   const $newLat = $('#lat');
   const $newLng = $('#lng');
+  const $rating = $('#rating');
 
 
   function initMap() {
@@ -42,6 +43,7 @@ $(() => {
     $website.val(place.website);
     $newLat.val(place.geometry.location.lat());
     $newLng.val(place.geometry.location.lng());
+    $rating.val(place.rating);
   }
 
   //On show attraction page
