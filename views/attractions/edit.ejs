@@ -8,10 +8,6 @@
       <form method="POST" action="/attractions/<%= attraction.id %>">
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
-          <label for="placeName">Place name</label>
-          <input class="form-control" type="text" name="placeName" value="<%= attraction.placeName %>" id="placeName" required minlength="2">
-        </div>
-        <div class="form-group">
           <label for="website">Website</label>
           <input class="form-control" type="url" name="website" value="<%= attraction.website %>" id="website" required>
         </div>
@@ -21,11 +17,7 @@
         </div>
         <div class="form-group">
           <label for="description">Short description</label>
-          <input class="form-control" type="text" name="description" value="<%= attraction.description %>" id="description" required>
-        </div>
-        <div class="form-group">
-          <label for="rating">Rating out of 5</label>
-          <input class="form-control" type="number" name="rating" value="<%= attraction.rating %>" id="rating" required>
+          <textarea class="form-control" type="text" name="description" placeholder="Short description" id="description" required rows="3"><%= attraction.description %></textarea>
         </div>
         <div class="form-group">
           <label for="category">Category</label>
@@ -40,26 +32,6 @@
             <option <% if(attraction.category === 'Shopping') { %>selected<% } %>>Shopping</option>
             <option <% if(attraction.category === 'Other') { %>selected<% } %>>Other</option>
           </select>
-        </div>
-        <div class="form-group">
-          <label for="addressLine1">Address line 1</label>
-          <input class="form-control" type="text" name="addressLine1" value="<%= attraction.address.line1 %>" id="addressLine1" required>
-        </div>
-        <div class="form-group">
-          <label for="addressLine2">Address line 2</label>
-          <input class="form-control" type="text" name="addressLine2" value="<%= attraction.address.line2 %>" id="addressLine2" required>
-        </div>
-        <div class="form-group">
-          <label for="postcode">Postcode</label>
-          <input class="form-control" type="text" name="postcode" value="<%= attraction.address.postcode %>" id="postcode" required>
-        </div>
-        <div class="form-group">
-          <label for="lat">Latitude</label>
-          <input class="form-control" type="number" name="lat" value="<%= attraction.address.lat %>" id="lat" required>
-        </div>
-        <div class="form-group">
-          <label for="lng">Longitude</label>
-          <input class="form-control" type="number" name="lng" value="<%= attraction.address.lng %>" id="lng" required>
         </div>
         <button class="btn btn-primary">Submit</button>
       </form>

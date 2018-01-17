@@ -1,11 +1,16 @@
 @import "variables";
 
 body {
-  background-color: #F3F3F3;
+  background-color: #F1F1F1;
   font-family: 'Helvetica', sans-serif;
   nav {
     &.layout-nav {
       background-color: $primary-color;
+    }
+  }
+  a {
+    h5 {
+      color: #000;
     }
   }
 }
@@ -19,15 +24,25 @@ ul {
   list-style-type: none;
 }
 
+a {
+  &.primary-link {
+    font-size: 16px;
+  }
+}
+
 .box {
   border: solid 0px red;
 }
 
+.show-image {
+  padding-left: 33px;
+}
+
 .map {
   margin-top: 20px;
-   width: 80%;
-   height: 30vh;
-   background-color: grey;
+  width: 80%;
+  height: 35vh;
+  background-color: grey;
  }
 
 .center-header {
@@ -36,8 +51,9 @@ ul {
   margin-top: 10px;
 }
 
-.edit-delete-buttons {
+.show-page-buttons {
   margin: 10px 5px;
+  margin-bottom: 30px;
 }
 
 .card-place-name {
@@ -53,8 +69,13 @@ ul {
 }
 
 .index-row {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
+}
+
+.show-row {
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .show-info-row {
@@ -63,5 +84,12 @@ ul {
 }
 
 .comment-name {
+  font-size: 18px;
   font-weight: bold;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.comment-text {
+
 }

@@ -21,7 +21,106 @@ $(() => {
   function initMap() {
     map = new google.maps.Map($map.get(0), {
       center: latLng,
-      zoom: 14
+      zoom: 14,
+      styles: [
+        {
+          "featureType": "road",
+          "stylers": [
+            {
+              "hue": "#5e00ff"
+            },
+            {
+              "saturation": -79
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "stylers": [
+            {
+              "saturation": -78
+            },
+            {
+              "hue": "#6600ff"
+            },
+            {
+              "lightness": -47
+            },
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "stylers": [
+            {
+              "lightness": 22
+            }
+          ]
+        },
+        {
+          "featureType": "landscape",
+          "stylers": [
+            {
+              "hue": "#6600ff"
+            },
+            {
+              "saturation": -11
+            }
+          ]
+        },
+        {},
+        {},
+        {
+          "featureType": "water",
+          "stylers": [
+            {
+              "saturation": -65
+            },
+            {
+              "hue": "#1900ff"
+            },
+            {
+              "lightness": 8
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "stylers": [
+            {
+              "weight": 1.3
+            },
+            {
+              "lightness": 30
+            }
+          ]
+        },
+        {
+          "featureType": "transit",
+          "stylers": [
+            {
+              "visibility": "simplified"
+            },
+            {
+              "hue": "#5e00ff"
+            },
+            {
+              "saturation": -16
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "stylers": [
+            {
+              "saturation": -72
+            }
+          ]
+        },
+        {}
+      ]
     });
     var marker = new google.maps.Marker({
       position: latLng,
@@ -29,11 +128,11 @@ $(() => {
     });
   }
 
+  //When text in attraction field has changed fill in the new data for that address
   function initAutocomplete() {
     autocomplete = new google.maps.places.Autocomplete($('#autocomplete').get(0));
     autocomplete.addListener('place_changed', fillInAddress);
   }
-
   function fillInAddress() {
     var place = autocomplete.getPlace();
     console.log(place);
