@@ -1,6 +1,18 @@
-// import scss partials here
+@import "variables";
+
 body {
+  background-color: #F3F3F3;
   font-family: 'Helvetica', sans-serif;
+  nav {
+    &.layout-nav {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.btn {
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 ul {
