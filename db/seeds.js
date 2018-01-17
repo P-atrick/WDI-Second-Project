@@ -16,13 +16,9 @@ Attraction
     description: 'One of Londons most famous landmarks, the historic Tower houses the Crown Jewels, the prison cell of Sir Walter Raleigh, known as the Bloody Tower, and the Chapel of St. John and the Royal Armories.',
     rating: 5,
     category: 'History',
-    address: {
-      line1: 'Tower of London',
-      line2: 'London',
-      postcode: 'EC3N 4AB',
-      lat: 51.5081124,
-      lng: -0.078138
-    },
+    address: '362 Tower Hill, St Katharines & Wapping, London EC3N 4DR, UK',
+    lat: 51.5081124,
+    lng: -0.078138,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'British Museum',
@@ -31,13 +27,9 @@ Attraction
     description: 'A museum of the world, for the world. Discover over two million years of human history and culture. Some of the world-famous objects include the Rosetta Stone, the Parthenon sculptures and Egyptian mummies.',
     rating: 4,
     category: 'Museum',
-    address: {
-      line1: 'Great Russell St',
-      line2: 'London',
-      postcode: 'WC1B 3DG',
-      lat: 51.5194133,
-      lng: -0.1291453
-    },
+    address: 'Great Russell St, Bloomsbury, London WC1B 3DG, UK',
+    lat: 51.5194133,
+    lng: -0.1291453,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'National Gallery',
@@ -46,13 +38,9 @@ Attraction
     description: 'The National Gallery houses the national collection of paintings in the Western European tradition from the 13th to the 19th centuries. It is on show 361 days a year, free of charge.',
     rating: 3,
     category: 'Art',
-    address: {
-      line1: 'Trafalgar Square',
-      line2: 'London',
-      postcode: 'WC2N 5DN',
-      lat: 51.508929,
-      lng: -0.1304877
-    },
+    address: 'Trafalgar Square, London WC2N 5DN, UK',
+    lat: 51.508929,
+    lng: -0.1304877,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'St.James Park',
@@ -61,13 +49,9 @@ Attraction
     description: 'This 90-acre park, the oldest Royal Park in London, features a large lake that is a wildlife sanctuary for ducks, geese, swans and even pelicans.',
     rating: 4,
     category: 'Nature',
-    address: {
-      line1: 'Horse Guards Road',
-      line2: 'London',
-      postcode: 'SW1A 2BJ',
-      lat: 51.5024597,
-      lng: -0.1369996
-    },
+    address: 'Horse Guards Road, London SW1A 2BJ, UK',
+    lat: 51.5024597,
+    lng: -0.1369996,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'Tower Bridge',
@@ -76,13 +60,9 @@ Attraction
     description: 'An iconic London landmark and one of Britains best loved historic sites. Within the Bridges iconic structure and magnificent Victorian Engine rooms, the Tower Bridge Exhibition is the best way of exploring the most famous bridge in the world! Enjoy stunning panoramic views across London from our high-level walkways, 42 metres above the River Thames.',
     rating: 5,
     category: 'Architecture',
-    address: {
-      line1: 'Tower Bridge Road',
-      line2: 'London',
-      postcode: 'SE1 2UP',
-      lat: 51.5054,
-      lng: -0.0755235
-    },
+    address: 'Tower Bridge, London SE1 2AA, UK',
+    lat: 51.5054,
+    lng: -0.0755235,
     createdBy: '5a5c916e04ee24b55caa98fe'
   }])
   .then((attractions) => console.log(`${attractions.length} attractions created`))

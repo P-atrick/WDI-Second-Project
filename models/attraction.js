@@ -18,13 +18,9 @@ const attractionSchema = new mongoose.Schema({
   description: { type: String, required: true },
   rating: { type: Number, required: true },
   category: { type: String, minlength: 3, required: true, trim: true },
-  address: {
-    line1: { type: String, required: true },
-    line2: { type: String },
-    postcode: { type: String, required: true },
-    lat: { type: Number, required: true },
-    lng: { type: Number, required: true }
-  },
+  address: { type: String },
+  lat: { type: Number, required: true },
+  lng: { type: Number, required: true },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'},
   comments: [ commentSchema ]
 });
