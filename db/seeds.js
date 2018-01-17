@@ -22,7 +22,8 @@ Attraction
       postcode: 'EC3N 4AB',
       lat: 51.5081124,
       lng: -0.078138
-    }
+    },
+    createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'British Museum',
     website: 'http://www.britishmuseum.org/',
@@ -36,7 +37,8 @@ Attraction
       postcode: 'WC1B 3DG',
       lat: 51.5194133,
       lng: -0.1291453
-    }
+    },
+    createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'National Gallery',
     website: 'http://www.nationalgallery.org.uk/',
@@ -50,7 +52,8 @@ Attraction
       postcode: 'WC2N 5DN',
       lat: 51.508929,
       lng: -0.1304877
-    }
+    },
+    createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'St.James Park',
     website: 'https://www.royalparks.org.uk/parks/st-jamess-park',
@@ -64,7 +67,8 @@ Attraction
       postcode: 'SW1A 2BJ',
       lat: 51.5024597,
       lng: -0.1369996
-    }
+    },
+    createdBy: '5a5c916e04ee24b55caa98fe'
   }, {
     placeName: 'Tower Bridge',
     website: 'http://www.towerbridge.org.uk/',
@@ -78,7 +82,8 @@ Attraction
       postcode: 'SE1 2UP',
       lat: 51.5054,
       lng: -0.0755235
-    }
+    },
+    createdBy: '5a5c916e04ee24b55caa98fe'
   }])
   .then((attractions) => console.log(`${attractions.length} attractions created`))
   .catch((err) => console.log(err))
