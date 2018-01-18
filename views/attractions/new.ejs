@@ -10,6 +10,20 @@
           <label for="autocomplete">Attraction</label>
           <input id="autocomplete" type="text" class="form-control" placeholder="Attraction">
         </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select class="form-control" id="category" name="category">
+            <option>Art</option>
+            <option>Architecture</option>
+            <option>Entertainment</option>
+            <option>History</option>
+            <option>Nature</option>
+            <option>Museum</option>
+            <option>Restaurant</option>
+            <option>Shopping</option>
+            <option>Other</option>
+          </select>
+        </div>
         <div class="form-group d-none">
           <label for="placeName">Place name</label>
           <input class="form-control"type="text" name="placeName" placeholder="Place name" id="placeName" required>
@@ -25,20 +39,6 @@
         <div class="form-group">
           <label for="description">Short description</label>
           <textarea class="form-control" type="text" name="description" placeholder="Short description" id="description" required rows="3"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="category">Category</label>
-          <select class="form-control" id="category" name="category">
-            <option>Art</option>
-            <option>Architecture</option>
-            <option>Entertainment</option>
-            <option>History</option>
-            <option>Nature</option>
-            <option>Museum</option>
-            <option>Restaurant</option>
-            <option>Shopping</option>
-            <option>Other</option>
-          </select>
         </div>
         <div class="form-group d-none">
           <label for="rating">Rating</label>

@@ -8,18 +8,6 @@
       <form method="POST" action="/attractions/<%= attraction.id %>">
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
-          <label for="website">Website</label>
-          <input class="form-control" type="url" name="website" value="<%= attraction.website %>" id="website" required>
-        </div>
-        <div class="form-group">
-          <label for="image">Image url</label>
-          <input class="form-control" type="url" name="image" value="<%= attraction.image %>" id="image" required>
-        </div>
-        <div class="form-group">
-          <label for="description">Short description</label>
-          <textarea class="form-control" type="text" name="description" placeholder="Short description" id="description" required rows="3"><%= attraction.description %></textarea>
-        </div>
-        <div class="form-group">
           <label for="category">Category</label>
           <select class="form-control" id="category">
             <option <% if(attraction.category === 'Art') { %>selected<% } %>>Art</option>
@@ -32,6 +20,18 @@
             <option <% if(attraction.category === 'Shopping') { %>selected<% } %>>Shopping</option>
             <option <% if(attraction.category === 'Other') { %>selected<% } %>>Other</option>
           </select>
+        </div>
+        <div class="form-group">
+          <label for="website">Website</label>
+          <input class="form-control" type="url" name="website" value="<%= attraction.website %>" id="website" required>
+        </div>
+        <div class="form-group">
+          <label for="image">Image url</label>
+          <input class="form-control" type="url" name="image" value="<%= attraction.image %>" id="image" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Short description</label>
+          <textarea class="form-control" type="text" name="description" placeholder="Short description" id="description" required rows="3"><%= attraction.description %></textarea>
         </div>
         <button class="btn btn-primary">Submit</button>
       </form>
