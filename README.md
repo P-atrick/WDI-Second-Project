@@ -6,9 +6,11 @@
 * EJS
 * Javascript
 * jQuery
+* Gulp
 * Google Maps API
 * Google Places API
-* Gulp
+* Balsamiq
+* Trello
 * Git
 * Heroku
 
