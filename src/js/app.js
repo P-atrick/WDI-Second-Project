@@ -3,7 +3,6 @@ $(() => {
   const $map = $('.map');
   const $indexMap = $('.index-map');
   let map = null;
-  let locations = null;
   let autocomplete = null;
 
   const $lat = $('#lat-lng').attr('data-lat');
@@ -16,109 +15,111 @@ $(() => {
   const $newLng = $('#lng');
   const $rating = $('#rating');
 
+  const mapStyle = [
+    {
+      "featureType": "road",
+      "stylers": [
+        {
+          "hue": "#5e00ff"
+        },
+        {
+          "saturation": -79
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "stylers": [
+        {
+          "saturation": -78
+        },
+        {
+          "hue": "#6600ff"
+        },
+        {
+          "lightness": -47
+        },
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "stylers": [
+        {
+          "lightness": 22
+        }
+      ]
+    },
+    {
+      "featureType": "landscape",
+      "stylers": [
+        {
+          "hue": "#6600ff"
+        },
+        {
+          "saturation": -11
+        }
+      ]
+    },
+    {},
+    {},
+    {
+      "featureType": "water",
+      "stylers": [
+        {
+          "saturation": -65
+        },
+        {
+          "hue": "#1900ff"
+        },
+        {
+          "lightness": 8
+        }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "stylers": [
+        {
+          "weight": 1.3
+        },
+        {
+          "lightness": 30
+        }
+      ]
+    },
+    {
+      "featureType": "transit",
+      "stylers": [
+        {
+          "visibility": "simplified"
+        },
+        {
+          "hue": "#5e00ff"
+        },
+        {
+          "saturation": -16
+        }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "stylers": [
+        {
+          "saturation": -72
+        }
+      ]
+    },
+    {}
+  ]
+
   function initIndexMap() {
     map = new google.maps.Map($indexMap.get(0), {
       center: latLng,
       zoom: 13,
-      styles: [
-        {
-          "featureType": "road",
-          "stylers": [
-            {
-              "hue": "#5e00ff"
-            },
-            {
-              "saturation": -79
-            }
-          ]
-        },
-        {
-          "featureType": "poi",
-          "stylers": [
-            {
-              "saturation": -78
-            },
-            {
-              "hue": "#6600ff"
-            },
-            {
-              "lightness": -47
-            },
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "road.local",
-          "stylers": [
-            {
-              "lightness": 22
-            }
-          ]
-        },
-        {
-          "featureType": "landscape",
-          "stylers": [
-            {
-              "hue": "#6600ff"
-            },
-            {
-              "saturation": -11
-            }
-          ]
-        },
-        {},
-        {},
-        {
-          "featureType": "water",
-          "stylers": [
-            {
-              "saturation": -65
-            },
-            {
-              "hue": "#1900ff"
-            },
-            {
-              "lightness": 8
-            }
-          ]
-        },
-        {
-          "featureType": "road.local",
-          "stylers": [
-            {
-              "weight": 1.3
-            },
-            {
-              "lightness": 30
-            }
-          ]
-        },
-        {
-          "featureType": "transit",
-          "stylers": [
-            {
-              "visibility": "simplified"
-            },
-            {
-              "hue": "#5e00ff"
-            },
-            {
-              "saturation": -16
-            }
-          ]
-        },
-        {
-          "featureType": "transit.line",
-          "stylers": [
-            {
-              "saturation": -72
-            }
-          ]
-        },
-        {}
-      ]
+      styles: mapStyle
     });
   }
 
@@ -126,105 +127,7 @@ $(() => {
     map = new google.maps.Map($map.get(0), {
       center: latLng,
       zoom: 14,
-      styles: [
-        {
-          "featureType": "road",
-          "stylers": [
-            {
-              "hue": "#5e00ff"
-            },
-            {
-              "saturation": -79
-            }
-          ]
-        },
-        {
-          "featureType": "poi",
-          "stylers": [
-            {
-              "saturation": -78
-            },
-            {
-              "hue": "#6600ff"
-            },
-            {
-              "lightness": -47
-            },
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "road.local",
-          "stylers": [
-            {
-              "lightness": 22
-            }
-          ]
-        },
-        {
-          "featureType": "landscape",
-          "stylers": [
-            {
-              "hue": "#6600ff"
-            },
-            {
-              "saturation": -11
-            }
-          ]
-        },
-        {},
-        {},
-        {
-          "featureType": "water",
-          "stylers": [
-            {
-              "saturation": -65
-            },
-            {
-              "hue": "#1900ff"
-            },
-            {
-              "lightness": 8
-            }
-          ]
-        },
-        {
-          "featureType": "road.local",
-          "stylers": [
-            {
-              "weight": 1.3
-            },
-            {
-              "lightness": 30
-            }
-          ]
-        },
-        {
-          "featureType": "transit",
-          "stylers": [
-            {
-              "visibility": "simplified"
-            },
-            {
-              "hue": "#5e00ff"
-            },
-            {
-              "saturation": -16
-            }
-          ]
-        },
-        {
-          "featureType": "transit.line",
-          "stylers": [
-            {
-              "saturation": -72
-            }
-          ]
-        },
-        {}
-      ]
+      styles: mapStyle
     });
     var marker = new google.maps.Marker({
       position: latLng,
