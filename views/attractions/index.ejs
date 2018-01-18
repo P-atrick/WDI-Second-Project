@@ -3,9 +3,7 @@
 <div class="row index-row">
   <% attractions.forEach((attraction) => { %>
     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <div class="image-container">
-        <a href="/attractions/<%= attraction.id %>"><img class="index-image" src="<%= attraction.image %>" alt="Card image cap"></a>
-      </div>
+      <a href="/attractions/<%= attraction.id %>"><img class="index-image" src="<%= attraction.image %>" alt="Card image cap"></a>
       <div class="">
         <a href="/attractions/<%= attraction.id %>"><h5 class="place-name"><%= attraction.placeName %></h5></a>
       </div>
