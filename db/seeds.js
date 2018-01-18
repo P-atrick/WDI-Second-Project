@@ -64,6 +64,83 @@ Attraction
     lat: 51.5055252,
     lng: -0.0754933,
     createdBy: '5a5c916e04ee24b55caa98fe'
+  }, {
+    placeName: 'Houses of Parliament',
+    website: 'http://www.parliament.uk/',
+    image: 'https://i.imgur.com/numjcXc.jpg',
+    description: 'Most of this iconic building was built in the mid-19th century following a devastating fire in 1834. Westminster Hall survived the fire and dates from 1097. Visitors can book tours through the House of Commons and the House of Lords, and are welcome to watch debates and committees when the Houses are sitting.',
+    rating: 4.4,
+    category: 'Architecture',
+    address: 'Palace of Westminster, Westminster, London SW1A 0PW, UK',
+    lat: 51.4997381,
+    lng: -0.1268353,
+    createdBy: '5a5c916e04ee24b55caa98fe'
+  }, {
+    placeName: 'HMS Belfast',
+    website: 'http://www.iwm.org.uk/visits/hms-belfast',
+    image: 'https://i.imgur.com/EP4LSLG.jpg',
+    description: 'Launched in 1938, this cruiser served in World War II, playing a major role in the sinking of the German battle ship "Scharnhorst" in the Normandy landings.',
+    rating: 4.5,
+    category: 'History',
+    address: 'The Queens Walk, London SE1 2JH, UK',
+    lat: 51.506579,
+    lng: -0.08138899999994464,
+    createdBy: '5a5c916e04ee24b55caa98fe'
+  }, {
+    placeName: 'Buckingham Palace',
+    website: 'https://www.royalcollection.org.uk/visit/the-queens-gallery-buckingham-palace',
+    image: 'https://i.imgur.com/4XlYjng.jpg',
+    description: 'Buckingham Palace serves as both the office and London residence of Her Majesty The Queen. During a visit to Buckingham Palace, visitors can see the nineteen magnificent State Rooms, which provide the setting for ceremonial occasions and official entertaining.',
+    rating: 4.4,
+    category: 'History',
+    address: 'Buckingham Palace Rd, London, UK',
+    lat: 51.4949662,
+    lng: -0.14615460000004532,
+    createdBy: '5a5c916e04ee24b55caa98fe'
+  }, {
+    placeName: 'St Pauls Cathedral',
+    website: 'http://www.stpauls.co.uk/',
+    image: 'https://i.imgur.com/OkcB63S.jpg',
+    description: 'Rebuilt by Christopher Wren after the great Fire of 1666, St. Pauls has been the site of many historic state occasions; including Winston Churchills state funeral and the Royal Wedding of Prince Charles and Lady Diana Spencer.',
+    rating: 4.5,
+    category: 'Architecture',
+    address: 'St. Pauls Churchyard, London EC4M 8AD, UK',
+    lat: 51.5138453,
+    lng: -0.0983506000000034,
+    createdBy: '5a5c916e04ee24b55caa98fe'
+  }, {
+    placeName: 'Sky Garden',
+    website: 'https://skygarden.london/',
+    image: 'https://i.imgur.com/e9QRFr7.jpg',
+    description: 'The famous enlarged glass dome of 20 Fenchurch Street is dedicated to three storeys of exquisitely landscaped public gardens and Londons most exclusive social spaces, including observation decks and an open air terrace. Sky Garden also houses restaurants Darwin Brasserie, Fenchurch Seafood Bar & Grill and Sky Pod Bar.',
+    rating: 4.6,
+    category: 'Architecture',
+    address: '20 Fenchurch St, London EC3M 8AF, UK',
+    lat: 51.5110985,
+    lng: -0.08363729999996394,
+    createdBy: '5a5c916e04ee24b55caa98fe'
+  }, {
+    placeName: 'Shakespeares Globe Theatre',
+    website: 'http://www.shakespearesglobe.com/',
+    image: 'https://i.imgur.com/vsE3Rmo.jpg',
+    description: 'Shakespeares Globe is a unique international resource dedicated to the exploration of Shakespeares work and the playhouse for which he wrote, through the connected means of performance and education.',
+    rating: 4.5,
+    category: 'Entertainment',
+    address: '21 New Globe Walk, London SE1 9DT, UK',
+    lat: 51.508076,
+    lng: -0.09719399999994494,
+    createdBy: '5a5c916e04ee24b55caa98fe'
+  }, {
+    placeName: 'Borough Market',
+    website: 'http://boroughmarket.org.uk/',
+    image: 'https://i.imgur.com/IlHeoL9.jpg',
+    description: 'An amazing food market dating back to the 13th century.',
+    rating: 4.6,
+    category: 'Shopping',
+    address: '8 Southwark Street, London SE1 1TL, UK',
+    lat: 51.50544,
+    lng: -0.09106059999999161,
+    createdBy: '5a5c916e04ee24b55caa98fe'
   }])
   .then((attractions) => console.log(`${attractions.length} attractions created`))
   .catch((err) => console.log(err))
