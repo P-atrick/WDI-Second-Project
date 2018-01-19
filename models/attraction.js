@@ -16,7 +16,7 @@ const attractionSchema = new mongoose.Schema({
   website: { type: String, trim: true },
   image: { type: String, required: true, trim: true },
   description: { type: String, required: true },
-  rating: { type: String, required: true },
+  rating: { type: Number, required: true },
   category: { type: String, minlength: 3, required: true, trim: true },
   address: { type: String },
   lat: { type: Number, required: true },
