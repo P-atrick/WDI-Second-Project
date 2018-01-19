@@ -53,6 +53,7 @@ The Google Places API is used to help users add new attractions. When a place is
 * Display all attractions as markers on the homepage map
 * Select multiple attractions to visit and generate a walking route
 * Location biasing for the new attraction search field
+* User profile pages
 
 ## Links
 * Project on [GitHub](https://github.com/P-atrick/WDI-Second-Project)
