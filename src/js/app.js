@@ -142,7 +142,6 @@ $(() => {
   }
   function fillInAddress() {
     var place = autocomplete.getPlace();
-    console.log(place);
     $placeName.val(place.name);
     $address.val(place.formatted_address);
     $website.val(place.website);

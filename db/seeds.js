@@ -19,7 +19,6 @@ User
     passwordConfirmation: 'patrick'
   })
   .then((user) => {
-    console.log(user);
     return Attraction
       .create([{
         placeName: 'Tower of London',

@@ -1,7 +1,7 @@
 # WDI Project 2 - Trip Consultant
 
 ## Link to Project
-* The project can be used on Heroku [here](http://tripconsultant.herokuapp.com/)
+The project can be used on Heroku [here](http://tripconsultant.herokuapp.com/)
 
 <img width="1440" alt="Trip Consultant homepage" src="https://user-images.githubusercontent.com/13580512/35149330-9bc7c588-fd0d-11e7-92c0-9a45cecf5ee6.png">
 
@@ -15,7 +15,7 @@ Signed in users can comment on attractions and later delete those comments.
 
 <img width="1440" alt="Trip Consultant attractions show page" src="https://user-images.githubusercontent.com/13580512/35149495-2f2eeac2-fd0e-11e7-8020-bee6fd75593a.png">
 
-The Google Places API is used to help users add new attractions. When a place is selected the API is used to fill in almost all of the form fields automatically.
+The Google Places API is used to help users add new attractions. When a place is selected the API is used to fill in the majority of the form fields automatically if Google has that information readily available in the API.
 
 <img width="1440" alt="Trip Consultant new attraction page" src="https://user-images.githubusercontent.com/13580512/35149743-36364652-fd0f-11e7-8fc7-179f7a3414b4.png">
 
