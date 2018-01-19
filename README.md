@@ -22,7 +22,10 @@ The Google Places API is used to help users add new attractions. When a place is
 ## Tools used
 * Javascript
 * jQuery
+* Node.js
 * SASS
+* Bootstrap
+* Mongo
 * Gulp
 * Balsamiq
 * Trello
