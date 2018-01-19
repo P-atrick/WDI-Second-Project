@@ -1,3 +1,7 @@
+<% console.log(attraction.createdBy.id) %>
+<% console.log(user.id) %>
+
+
 <h1 class="center-header"><%= attraction.placeName %></h1>
 <hr>
 <form class="show-attraction d-none" action="index.html" method="post">
@@ -42,7 +46,7 @@
       </div>
     </div>
   </div>
-  <% if (locals.isLoggedIn && attractions.createdBy.id === user.id) { %>
+  <% if (locals.isLoggedIn && attraction.createdBy.id === user.id) { %>
     <div class="row index-row">
       <a class="btn btn-secondary show-page-buttons" href="/attractions/<%= attraction.id %>/edit">Edit</a>
       <form method="POST" action="/attractions/<%= attraction.id %>" class="show-page-buttons">
