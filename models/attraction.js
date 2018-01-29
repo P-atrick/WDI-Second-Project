@@ -13,7 +13,7 @@ commentSchema.methods.belongsTo = function commentBelongsTo(user) {
 
 const attractionSchema = new mongoose.Schema({
   placeName: { type: String, minlength: 3, required: true },
-  website: { type: String, trim: true },
+  website: { type: String, trim: true, required: true },
   image: { type: String, required: true, trim: true },
   description: { type: String, required: true },
   rating: { type: Number, required: true },
