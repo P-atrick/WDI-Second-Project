@@ -21,7 +21,7 @@ The Google Places API is used to help users add new attractions. When a place is
 <img width="1440" alt="Trip Consultant new attraction page" src="https://user-images.githubusercontent.com/13580512/35149743-36364652-fd0f-11e7-8fc7-179f7a3414b4.png">
 
 ## Tools used
-* Javascript
+* JavaScript
 * jQuery
 * Node.js
 * SASS
@@ -37,9 +37,9 @@ The Google Places API is used to help users add new attractions. When a place is
 * Bcrypt
 * Bluebird
 * Body parser
-* Ejs
+* EJS
 * Express
-* Express ejs layouts
+* Express EJS layouts
 * Express flash
 * Express session
 * Method override
